@@ -11,8 +11,8 @@ div {
 body {
 	overflow-x: hidden;
 	font-weight: 300;
+	background-color: green;
 }
-
 
 h1,
 h2,
@@ -26,17 +26,18 @@ h5 {
 	line-height: 1.65;
 }
 
-
 .sf-header__header {
 	max-width: 1240px !important;
 	column-gap: 30px !important;
 }
+
 .sf-header__icons {
 	margin: 0 !important;
 }
+
 .sf-header__logo {
 	display: inline-flex !important;
-	align-content: center;
+	align-items: center;
 	justify-content: center;
 	margin: 0 !important;
 	padding: 0 !important;
@@ -47,7 +48,7 @@ h5 {
 	max-width: 250px !important;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
 	.sf-image {
 		max-width: 180px !important;
 	}
@@ -61,8 +62,8 @@ h5 {
 	flex: 1 !important;
 }
 
-.sf-header__mobile-top-bar .sf-button:first-child{
-    justify-content: flex-start !important;
+.sf-header__mobile-top-bar .sf-button:first-child {
+	justify-content: flex-start !important;
 }
 
 .header-mobile-icons {
