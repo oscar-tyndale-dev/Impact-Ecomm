@@ -1,18 +1,10 @@
-div {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
+/* remove horizontal scroll */
 body {
 	overflow-x: hidden;
 	font-weight: 300;
 }
 
+/* Normalize text */
 h1,
 h2,
 h3,
@@ -20,20 +12,25 @@ h4,
 h5 {
 	line-height: 1.3;
 }
-
 .builder-text p {
 	line-height: 1.65;
 }
 
+
+/* Normalize header container */
 .sf-header__header {
 	max-width: 1240px !important;
 	column-gap: 30px !important;
 }
 
+
+/* Remove unnecesary margin on header icons */ 
 .sf-header__icons {
 	margin: 0 !important;
 }
 
+
+/* Normalize logo and size*/
 .sf-header__logo {
 	display: inline-flex !important;
 	align-items: center;
@@ -42,29 +39,33 @@ h5 {
 	padding: 0 !important;
 }
 
+/* Normalize logo size */ 
 .sf-image {
 	max-height: unset !important;
-	max-width: 250px !important;
+	max-width: 180px !important;
+	max-width: 170px !important;
 }
-
 @media screen and (max-width: 1024px) {
 	.sf-image {
-		max-width: 180px !important;
+		max-width: 120px !important;
 	}
 }
 
+/* Normalize header on mobile */ 
 .sf-header__mobile-top-bar {
 	column-gap: 30px;
+	padding-bottom: 0 !important;
 }
 
+/* Grow by default */
 .sf-header__mobile-top-bar > * {
 	flex: 1 !important;
 }
 
+/* Normalize header on mobile */
 .sf-header__mobile-top-bar .sf-button:first-child {
 	justify-content: flex-start !important;
 }
-
 .header-mobile-icons {
 	margin: 0 !important;
 	justify-content: flex-end;
