@@ -2,6 +2,7 @@
 body {
 	overflow-x: hidden;
 	font-weight: 300;
+	/* background-color: blueviolet; */
 }
 
 /* Normalize text */
@@ -15,7 +16,6 @@ h5 {
 .builder-text p {
 	line-height: 1.65;
 }
-
 
 /* Normalize header container */
 .sf-header__header {

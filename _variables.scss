@@ -1,0 +1,29 @@
+// Variables
+$max-width-header: 1360px;
+$logo-max-width: 170px;
+$logo-max-width-tablet: 140px;
+$logo-max-width-mobile: 120px;
+
+// Breakpoints
+$mobile-breakpoint: 767px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+// Mixins
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-breakpoint}) and (max-width: #{$desktop-breakpoint - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-breakpoint}) {
+    @content;
+  }
+}

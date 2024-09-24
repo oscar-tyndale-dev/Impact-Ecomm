@@ -1,0 +1,93 @@
+@import 'variables';
+
+// Global styles
+body {
+	overflow-x: hidden;
+	font-weight: 300;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.3;
+}
+
+.builder-text p {
+	line-height: 1.65;
+}
+
+// Header styles
+.sf-header {
+	&__header {
+		column-gap: 15px;
+		box-sizing: border-box;
+
+		@include desktop {
+			// padding: 15px !important;
+			max-width: 1360px !important;
+		}
+	}
+
+	&__icons {
+		margin: 0;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		margin: 0;
+		padding: 0;
+	}
+
+	.store-selector {
+		margin: var(--spacer-xs) !important;
+	}
+
+	// Fixes distribution of mobile top bar items
+	&__mobile-top-bar {
+		column-gap: 30px;
+		padding-bottom: 0;
+
+		>* {
+			flex: 1;
+		}
+
+		.sf-button:first-child {
+			justify-content: flex-start;
+		}
+	}
+
+}
+
+// Mobile header icons
+.header-mobile-icons {
+	margin: 0;
+	justify-content: flex-end;
+}
+
+// Responsive adjustments
+@include mobile {
+	// Add mobile-specific styles here
+}
+
+@include tablet {
+	// Add tablet-specific styles here
+}
+
+@include desktop {
+	// Add desktop-specific styles here
+
+	// Normalize topbar max width
+	.topbar {
+		max-width: 1360px !important;
+	}
+
+	#layout {
+		max-width: 1360px !important;
+	}
+
+}
