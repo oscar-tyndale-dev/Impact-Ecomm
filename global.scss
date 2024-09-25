@@ -21,6 +21,13 @@ h5 {
 
 // Header styles
 .sf-header {
+	&__action {
+		color: white !important;
+		&:hover {
+			color: #FFD6AF !important;
+		}
+	}
+
 	&__header {
 		column-gap: 15px;
 		box-sizing: border-box;
@@ -28,6 +35,15 @@ h5 {
 		@include desktop {
 			// padding: 15px !important;
 			max-width: 1360px !important;
+		}
+	}
+	.current-selected-store  {
+		color: white !important;
+		&__icon {
+			color: #FFD6AF !important;
+		}
+		&__store-button {
+			color: #FFD6AF !important;
 		}
 	}
 
@@ -62,6 +78,8 @@ h5 {
 	}
 
 }
+
+
 
 // Mobile header icons
 .header-mobile-icons {

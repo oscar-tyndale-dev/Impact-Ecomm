@@ -1,6 +1,6 @@
 body {
   overflow-x: hidden;
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 
 h1,
@@ -15,6 +15,12 @@ h5 {
   line-height: 1.65;
 }
 
+.sf-header__action {
+  color: white !important;
+}
+.sf-header__action:hover {
+  color: #FFD6AF !important;
+}
 .sf-header__header {
   column-gap: 15px;
   box-sizing: border-box;
@@ -23,6 +29,15 @@ h5 {
   .sf-header__header {
     max-width: 1360px !important;
   }
+}
+.sf-header .current-selected-store {
+  color: white !important;
+}
+.sf-header .current-selected-store__icon {
+  color: #FFD6AF !important;
+}
+.sf-header .current-selected-store__store-button {
+  color: #FFD6AF !important;
 }
 .sf-header__icons {
   margin: 0;

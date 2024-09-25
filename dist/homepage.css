@@ -1,8 +1,11 @@
-/* Background and Controls */
+/* HOME PAGE -------------------------------------------------------------------- */
+/* Background */
 .sf-arrow {
   background-color: var(--primary-dealer-color) !important;
   right: 30px !important;
 }
+
+/* arrow color */
 .sf-arrow:after {
   color: white !important;
 }
@@ -12,35 +15,32 @@
   right: 0 !important;
 }
 
-/* Search Dropdown */
-.search-dropdown__wrapper,
-.search-dropdown__recent-item a,
-.sf-link {
-  transition: color 0.2s ease-in-out;
-}
-
+/* Fixes dropdown in search */
 .search-dropdown__wrapper,
 .search-dropdown__recent-item a {
   color: var(--c-white) !important;
+  transition: color 0.2s ease-in-out;
 }
 
 .search-dropdown__recent-item a:hover {
   color: var(--primary-dealer-color) !important;
 }
 
-/* Carousel Content */
+.sf-link {
+  transition: color 0.2s ease-in-out;
+}
+
+/*  Carousel contento box fixes */
 .carousel-slide__image {
   background-position: center;
 }
 
-@media (max-width: 767px) {
-  .carousel-slide {
-    min-height: 500px;
-    height: 60vh !important;
+/* desktop here: */
+@media (min-width: 992px) {
+  .sf-carousel-item.glide__slide {
+    position: relative;
   }
-}
 
-@media (min-width: 1024px) {
   .carousel-slide__wrapper {
     width: 100% !important;
     height: auto;
@@ -50,14 +50,7 @@
     left: 0;
     right: 0;
   }
-}
-@media (max-width: 767px) {
-  .carousel-slide__wrapper {
-    background-color: var(--primary-dealer-color) !important;
-  }
-}
 
-@media (min-width: 1024px) {
   .carousel-slide__content {
     width: 100% !important;
     max-width: 1360px;
@@ -68,6 +61,18 @@
     align-content: flex-start;
     align-items: flex-start;
   }
+
+  .carousel-slide__heading {
+    order: 0;
+    width: 80%;
+  }
+
+  .call-to-action {
+    justify-self: end;
+    order: 1;
+    align-self: center;
+  }
+
   .carousel-slide__content p {
     width: 100%;
     order: 2;
@@ -78,8 +83,24 @@
     line-height: 2 !important;
     vertical-align: top !important;
   }
+
+  .carousel-bullets {
+    top: 100% !important;
+    left: 0 !important;
+  }
 }
-@media (max-width: 767px) {
+/* mobile */
+@media (max-width: 991px) {
+  .carousel-slide__wrapper {
+    background-color: var(--primary-dealer-color) !important;
+  }
+
+  /* normalize carousel height */
+  .carousel-slide {
+    min-height: 500px;
+    height: 60vh !important;
+  }
+
   .carousel-slide__content {
     width: 100%;
     padding: 10px 20px !important;
@@ -91,42 +112,13 @@
     flex-shrink: 1;
     flex-basis: unset !important;
   }
-  .carousel-slide__content p {
-    margin-top: 0;
-  }
-}
 
-@media (min-width: 1024px) {
-  .carousel-slide__heading {
-    order: 0;
-    width: 80%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .call-to-action {
-    justify-self: end;
-    order: 1;
-    align-self: center;
-  }
-}
-
-@media (min-width: 1024px) {
-  .carousel-bullets {
-    top: 100% !important;
-    left: 0 !important;
-  }
-}
-
-@media (max-width: 767px) {
   .cms-button {
     width: 100%;
     text-align: center;
   }
-}
 
-@media (min-width: 1024px) {
-  .sf-carousel-item.glide__slide {
-    position: relative;
+  .carousel-slide__content p {
+    margin-top: 0;
   }
 }
