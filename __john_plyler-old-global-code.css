@@ -31,34 +31,22 @@ hr {
   transition: all 0.2s ease;
 }
 .sf-footer .builder-text a:hover {
-  color: #2972da !important;
+  color: #37BEDC !important;
 }
 .sf-footer .footer__link {
   color: #FFFFFF !important;
   transition: all 0.2s ease;
 }
 .sf-footer .footer__link:hover {
-  color: #2972da !important;
-}
-
-.category__banner {
-  border-radius: 12px;
-  overflow: clip;
-}
-.category__banner-image img {
-  object-fit: cover;
+  color: #37BEDC !important;
 }
 
 /* buttons CTA styling with site colors */
-.builder-block {
-  /* Hover effect */
-}
-.builder-block a[role=button],
-.builder-block a[role=link] {
+a[role=button] {
   /* Your styles here */
-  background-color: var(--primary-dealer-color);
+  background-color: #1A2379;
   border: 1px solid transparent;
-  color: white;
+  color: #F0F1F6;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -67,23 +55,20 @@ hr {
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.builder-block a[role=button]:hover,
-.builder-block a[role=link]:hover {
-  background-color: #2972da;
-  border: 1px solid white;
-  transition: all 0.3s ease;
-  color: white;
-}
 
-.locations-page {
-  min-height: calc(100vh - 600px) !important;
+/* Hover effect */
+a[role=button]:hover {
+  background-color: #265DAD;
+  border: 1px solid #cdd2fe;
+  transition: all 0.3s ease;
+  color: #cdd2fe;
 }
 
 .sf-header__action {
-  color: var(--secondary-dealer-color);
+  color: --var(secondary-dealer-color);
 }
 .sf-header__action:hover {
-  color: var(--secondary-dealer-color) !important;
+  color: --var(secondary-dealer-color) !important;
 }
 .sf-header__header {
   column-gap: 15px;
@@ -95,16 +80,16 @@ hr {
   }
 }
 .sf-header .navigation-item__link:hover {
-  color: white !important;
+  color: #FFFFFF !important;
 }
 .sf-header .current-selected-store {
-  color: var(--secondary-dealer-color);
+  color: --var(secondary-dealer-color);
 }
 .sf-header .current-selected-store__icon {
-  color: var(--secondary-dealer-color) !important;
+  color: --var(secondary-dealer-color) !important;
 }
 .sf-header .current-selected-store__store-button {
-  color: var(--secondary-dealer-color) !important;
+  color: --var(secondary-dealer-color) !important;
 }
 .sf-header__icons {
   margin: 0;
@@ -131,17 +116,17 @@ hr {
 }
 
 .search-dropdown__column {
-  color: var(--primary-dealer-color) !important;
+  color: #1A2379 !important;
 }
 .search-dropdown__title {
-  color: var(--primary-dealer-color) !important;
+  color: #1A2379 !important;
 }
 .search-dropdown__recent-item a {
   color: #FFFFFF !important;
   cursor: pointer;
 }
 .search-dropdown__recent-item a:hover {
-  color: var(--secondary-dealer-color) !important;
+  color: --var(secondary-dealer-color) !important;
 }
 
 .header-mobile-icons {
@@ -154,31 +139,7 @@ hr {
     max-width: 1360px !important;
   }
 
-  .layout-root {
-    max-width: 1360px !important;
-  }
-
   #layout {
     max-width: 1360px !important;
-  }
-
-  #category {
-    max-width: unset !important;
-  }
-
-  #product {
-    max-width: unset !important;
-  }
-  #product .product__details {
-    width: unset !important;
-  }
-  #product .product__header h1 {
-    font-weight: 800;
-    font-size: 2em;
-    color: var(--primary-dealer-color);
-  }
-  #product .product__brand h2 {
-    color: var(--secondary-dealer-color);
-    opacity: 0.6;
   }
 }

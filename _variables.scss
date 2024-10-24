@@ -1,5 +1,5 @@
-// Variables
-$max-width-header: 1360px;
+// Variables Viewports
+$max-width-container: 1360px;
 $logo-max-width: 170px;
 $logo-max-width-tablet: 140px;
 $logo-max-width-mobile: 120px;
@@ -25,5 +25,20 @@ $desktop-breakpoint: 1024px;
 @mixin desktop {
   @media (min-width: #{$desktop-breakpoint}) {
     @content;
+  } 
+}
+
+// Mixin for transitions
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $property $duration $timing;
+}
+
+// Mixin for tablet and below
+@mixin tablet-and-below {
+  @media (max-width: #{$desktop-breakpoint - 1px}) {
+    @content;
   }
 }
+
+@import 'plyler.scss'
+

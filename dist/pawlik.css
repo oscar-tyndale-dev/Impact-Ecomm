@@ -1,0 +1,117 @@
+/*
+* Custom CSS styles
+*
+* Global by default, but use `&` to scope to just this content, e.g.
+*
+*   & .foo {
+*     color: 'red'
+*   }
+*/
+
+
+.inner-content {
+    opacity: 0;
+    transform: scale(0.9);
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+.hover-item:hover .inner-content {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Arrows slider home */ 
+.sf-arrow--right:after {
+    color: white !important;
+}
+
+button.sf-arrow--right.sf-arrow.sf-button {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    right: 0 !important;
+    background-color: #000;
+    color: #FFF;
+}
+
+button.sf-arrow--right.sf-arrow.sf-button:hover {
+    background-color: #B4B4B4;
+    color: #F7FBFC;
+}
+
+/* end arrow slider */
+
+
+
+.carousel-slide__wrapper {
+    width: 100% !important;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-slide__content {
+    margin-left: 0 !important;
+    display: flex;
+    padding: 15px 20px 15px 30px;
+    flex-direction: column;
+    justify-content: left;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.call-to-action {
+    margin-bottom: 5px;
+}
+
+.carousel-slide {
+    max-height: 450px;
+}
+
+.carousel-slide__content p {
+    margin-top: 0px !important;
+}
+
+.carousel-slide__heading {
+    line-height: 2.2rem !important;
+    padding-top: 0px;
+}
+
+.sf-carousel-item.glide__slide {
+    position: relative;
+}
+
+.carousel-slide__image {
+    background-position: center;
+}
+
+@media (min-width: 1024px) {
+
+    .carousel-slide__content {width:90%!Important;}
+
+        .carousel-bullets {
+        top: 90% !important;
+        left: 90% !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-slide__wrapper {
+        display: block !important;
+    }
+
+    .carousel-slide__content {
+        padding: 15px !important;
+        gap: 5px !important;
+    }
+
+        .carousel-bullets {
+        top: 90% !important;
+         left: 70% !important;
+    }
+
+}

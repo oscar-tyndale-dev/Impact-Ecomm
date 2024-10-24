@@ -2,134 +2,161 @@
 
 /* HOME PAGE -------------------------------------------------------------------- */
 
-/* Background */
-.sf-arrow {
-  background-color: var(--primary-dealer-color) !important;
-right: 30px !important;
-}
 
-/* arrow color */
-.sf-arrow:after {
-  color: white !important;
-}
-
-
-.sf-carousel__controls {
-  left: unset !important;
-  right: 0 !important;
+/* Brands accordion */
+.item-expandable {
+	@include transition;
+	cursor: pointer !important;
+	&:hover {
+		flex-grow: 2;
+	}
 }
 
 
-/* Fixes dropdown in search */
-.search-dropdown__wrapper,
-.search-dropdown__recent-item a {
-  color: var(--c-white) !important;
-  transition: color 0.2s ease-in-out;
+
+/* Slider Styles */
+.sf-carousel {
+	// border: 10px solid green;
+	.sf-arrow {
+		background-color: var(--primary-dealer-color) !important;
+		&:after {
+			color: $color-white !important;
+		}
+	}
+	
+}
+.controls {
+	.sf-arrow {
+		right: 0 !important;
+	}
 }
 
-.search-dropdown__recent-item a:hover {
-  color: var(--primary-dealer-color) !important;
-}
 
-.sf-link {
-  transition: color 0.2s ease-in-out;
-}
-
-
-/*  Carousel contento box fixes */
 .carousel-slide__image {
-  background-position: center;
+	background-position: center;
 }
 
 
-/* desktop here: */
-@media (min-width: 992px) {
-
-  .sf-carousel-item.glide__slide {
-      position: relative;
-  }
-
-  .carousel-slide__wrapper {
-      width: 100% !important;
-      height: auto;
-      position: absolute;
-      padding: 5px 15px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-  }
-
-  .carousel-slide__content {
-      width: 100% !important;
-      max-width: 1360px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-content: flex-start;
-      align-items: flex-start;
-  }
-
-  .carousel-slide__heading {
-      order: 0;
-      width: 80%;
-  }
-
-  .call-to-action {
-      justify-self: end;
-      order: 1;
-      align-self: center;
-  }
-
-  .carousel-slide__content p {
-      width: 100%;
-      order: 2;
-      margin: 0 !important;
-      max-width: 80%;
-      font-size: 0.8em;
-      font-weight: 200;
-      line-height: 2 !important;
-      vertical-align: top !important;
-  }
-
-  .carousel-bullets {
-      top: 100% !important;
-      left: 0 !important;
-  }
-
+.sf-carousel-item.glide__slide {
+	position: relative;
 }
 
-/* mobile */
-@media (max-width: 991px) {
 
-  .carousel-slide__wrapper {
-      background-color: var(--primary-dealer-color) !important;
-  }
+// Desktop styles
+@include desktop {
+	.carousel-slide {
+		&__wrapper {
+			width: 100% !important;
+			height: auto;
+			position: absolute;
+			padding: 0 15px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0,0,0,0.4) !important;
+			-webkit-backdrop-filter: blur(15px);
+			backdrop-filter: blur(15px);
+		}
 
-/* normalize carousel height */
-.carousel-slide {
-  min-height: 500px;
-  height: 60vh !important;
+		&__heading {
+			order: 0;
+			width: 80%;
+			line-height: 1.5 !important;
+			font-size: 1.5em !important;
+		}
+
+		&__content {
+			width: 100% !important;
+			max-width: $max-width-container;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			align-items: flex-start;
+			.call-to-action {
+				justify-self: end;
+				order: 1;
+				align-self: center;
+			}
+			
+			p {
+				width: 100%;
+				order: 2;
+				margin: 0 !important;
+				max-width: 80%;
+				font-size: 0.8em;
+				font-weight: 200;
+				line-height: 150% !important;
+				padding-bottom: 10px !important;
+			}
+
+		}
+
+		
+	}
+
+	// Carousel Featured Products
+	.product-carousel {
+        width: 100vw !important;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin: 0 -50vw 0 -50vw !important;
+		&__wrapper {
+			width: 100% !important;
+			max-width: 1360px;
+		}
+		.controls__next {
+			right: -30px;
+		}
+    }
+
+
+
+    /* Adjusts buttons on product carousel to not be over the content */ 
+    // .product-carousel .controls__previous {
+    //     left: -45px !important;
+    // }
+    // .product-carousel .controls__next{
+    //     right: -45px !important;
+    // }
+
+
+
+}  // end Desktop
+
+// Mobile and Tablet for Slider
+@include tablet-and-below {
+	.carousel-slide {
+		height: unset !important;
+		&__wrapper {
+			background-color: var(--primary-dealer-color) !important;
+		}
+
+		&__content {
+			width: 100%;
+			padding: 10px 20px !important;
+			display: flex;
+			flex-direction: column;
+			flex-basis: unset !important;
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.carousel-bullets {
+		top: unset !important;
+		left: unset !important;
+		right: 10px;
+		bottom: 10px;
+	}
+
+	.cms-button {
+		width: 100%;
+		text-align: center;
+	}
 }
 
-  .carousel-slide__content {
-      width: 100%;
-      padding: 10px 20px !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: var(--header-background);
-  height: auto;
-  flex-shrink: 1;
-  flex-basis: unset !important;
-  }
 
-  .cms-button {
-      width: 100%;
-      text-align: center;
-  }
-
-  .carousel-slide__content p {
-      margin-top: 0;
-  }
-}
