@@ -7,10 +7,6 @@
   z-index: 99;
 }
 
-body {
-  background-color: green !important;
-}
-
 /* HOME PAGE -------------------------------------------------------------------- */
 /* Brands accordion */
 .item-expandable {
