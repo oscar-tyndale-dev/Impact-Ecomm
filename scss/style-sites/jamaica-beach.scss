@@ -1,6 +1,3 @@
-@use "../general-styles/global.scss";
-@use "../general-styles/homepage.scss";
-
 // JAMAICA COLORS
 $color-primary-dark: #9e153a;
 $color-primary: var(--primary-dealer-color);
@@ -8,6 +5,7 @@ $color-primary-light: #f6afc2;
 $color-secondary: var(--secondary-dealer-color);
 $color-white: #FFFFFF;
 $header-links-color: var(--secondary-dealer-color); // Assuming this was already defined
+$menu-header-hover-text-color: var(--primary-dealer-color);
 
 // Colors Buttons
 $button-background:#C32D55;
@@ -36,4 +34,9 @@ $button-hover-text: #794a10;
 			hsl(195deg 84% 57%) 100%);
 	position: absolute;
 	z-index: 99;
+}
+
+
+body {
+	background-color: green !important;
 }

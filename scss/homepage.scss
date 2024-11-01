@@ -1,10 +1,10 @@
-@use 'variables';
+@use 'variables' as *;
+@use 'style-switch' as *;
 /* HOME PAGE -------------------------------------------------------------------- */
-
 
 /* Brands accordion */
 .item-expandable {
-	@include variables.transition;
+	@include transition;
 	cursor: pointer !important;
 	&:hover {
 		flex-grow: 2;
@@ -18,7 +18,7 @@
 		background-color: var(--primary-dealer-color) !important;
 		right: 15px !important;
 		&:after {
-			color: variables.$color-white !important;
+			color: $color-white !important;
 		}
 	}
 }
@@ -55,7 +55,7 @@
 }
 
 // CARROUSEL SLIDES DESKTOP
-@include variables.desktop {
+@include desktop {
 	.carousel-slide {
 		&__wrapper {
 			width: 100% !important;
@@ -119,7 +119,7 @@
 
 
 // Desktop styles
-@include variables.desktop {
+@include desktop {
 	// Carousel Featured Products
 	.product-carousel {
         width: 100vw !important;
@@ -150,7 +150,7 @@
 }  // end Desktop
 
 // Mobile and Tablet for Slider
-@include variables.tablet-and-below {
+@include tablet-and-below {
 	.carousel-slide {
 		height: unset !important;
 		&__wrapper {

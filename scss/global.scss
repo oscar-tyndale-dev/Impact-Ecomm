@@ -1,5 +1,6 @@
-@use 'variables';
-
+@forward 'homepage';
+@use 'style-switch' as *;
+@use 'variables' as *;
 
 // Global styles
 body {
@@ -34,19 +35,19 @@ hr {
 /* footer text color adjustment */
 .sf-footer {
 	.builder-text a {
-		color: variables.$color-white !important;
+		color: $color-white !important;
 		transition: all 0.2s ease;
 
 		&:hover {
-			color: variables.$color-primary-light !important;
+			color: $color-primary-light !important;
 		}
 	}
 
 	.footer__link {
-		color: variables.$color-white !important;
+		color: $color-white !important;
 		transition: all 0.2s ease;
 		&:hover {
-			color: variables.$color-primary-light !important;
+			color: $color-primary-light !important;
 		}
 	}
 }
@@ -66,8 +67,8 @@ hr {
 /* buttons CTA styling with site colors */
 .builder-block a[role="button"],
 .builder-block a[role="link"] {
-	background-color: variables.$button-background;
-	color: variables.$button-text;
+	background-color: $button-background;
+	color: $button-text;
 	padding: 10px 20px;
 	text-decoration: none;
 	border-radius: 5px;
@@ -79,8 +80,8 @@ hr {
 
 .builder-block a[role="button"]:hover,
 .builder-block a[role="link"]:hover {
-	background-color: variables.$button-hover_background;
-	color: variables.$button-hover_text;
+	background-color: $button-hover_background;
+	color: $button-hover_text;
 	transition: all 0.3s ease;
 }
 
@@ -92,9 +93,9 @@ hr {
 // Header styles
 .sf-header {
 	&__action {
-		color: variables.$header-links-color;
+		color: $header-links-color;
 		&:hover {
-			color: variables.$color-primary !important;
+			color: $color-primary !important;
 		}
 	}
 
@@ -102,7 +103,7 @@ hr {
 		column-gap: 15px;
 		box-sizing: border-box;
 
-		@include variables.desktop {
+		@include desktop {
 			// padding: 15px !important;
 			max-width: 1360px !important;
 		}
@@ -111,20 +112,20 @@ hr {
 	.navigation-item {
 		&__link {
 			&:hover {
-				color: variables.$menu-header-hover-text-color !important;
+				color: $menu-header-hover-text-color !important;
 			}
 		}
 	}
 
 	.current-selected-store {
-		color: variables.$header-links-color;
+		color: $header-links-color;
 
 		&__icon {
-			color: variables.$color-secondary !important;
+			color: $color-secondary !important;
 		}
 
 		&__store-button {
-			color: variables.$color-secondary !important;
+			color: $color-secondary !important;
 		}
 	}
 
@@ -174,19 +175,19 @@ hr {
 
 .search-dropdown {
 	&__column {
-		color: variables.$color-primary !important;
+		color: $color-primary !important;
 	}
 
 	&__title {
-		color: variables.$color-primary !important;
+		color: $color-primary !important;
 	}
 
 	&__recent-item a {
-		color: variables.$color-white !important;
+		color: $color-white !important;
 		cursor: pointer;
 
 		&:hover {
-			color: variables.$color-secondary !important;
+			color: $color-secondary !important;
 		}
 	}
 }
@@ -198,15 +199,15 @@ hr {
 }
 
 // Responsive adjustments
-@include variables.mobile {
+@include mobile {
 	// Add mobile-specific styles here
 }
 
-@include variables.tablet {
+@include tablet {
 	// Add tablet-specific styles here
 }
 
-@include variables.desktop {
+@include desktop {
 	// Add desktop-specific styles here
 	
 
@@ -237,12 +238,12 @@ hr {
 				h1 {
 					font-weight: 800;
 					font-size: 2em;
-					color: variables.$color-primary;
+					color: $color-primary;
 				}
 			}
 			&__brand {
 				h2 {
-					color: variables.$color-secondary;
+					color: $color-secondary;
 					opacity: 0.6;
 				}
 			}
