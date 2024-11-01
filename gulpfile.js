@@ -3,13 +3,14 @@ const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 const fs = require('fs');
 const path = require('path');
+const browserSync = require('browser-sync').create();
 
 // Paths
 const paths = {
    global: 'scss/global.scss',
    styleSwitch: 'scss/_style-switch.scss',
    dist: 'dist/',
-   allScss: 'scss/**/*.scss' // Add this line
+   allScss: 'scss/**/*.scss'
 };
 
 // Function to get the included file names from _style-switch.scss
@@ -36,12 +37,19 @@ function compileGlobalStyles() {
          this.emit('end');
       }))
       .pipe(rename(outputFileName))
-      .pipe(gulp.dest(paths.dist));
+      .pipe(gulp.dest(paths.dist))
+      .pipe(browserSync.stream());
 }
 
 // Watch function
 function watch() {
+   browserSync.init({
+      server: {
+         baseDir: './'
+      }
+   });
    gulp.watch(paths.allScss, compileGlobalStyles);
+   gulp.watch('*.html').on('change', browserSync.reload);
 }
 
 // Clean task (optional but recommended)
