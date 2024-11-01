@@ -1,16 +1,33 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const rename = require('gulp-rename');
+const fs = require('fs');
+const path = require('path');
 
 // Paths
 const paths = {
-   global: 'scss/global.scss', // Entry point for your SCSS
-   allScss: 'scss/**/*.scss',  // Pattern to watch all SCSS files
-   dist: 'dist/'
+   global: 'scss/global.scss',
+   styleSwitch: 'scss/_style-switch.scss',
+   dist: 'dist/',
+   allScss: 'scss/**/*.scss' // Add this line
 };
+
+// Function to get the included file names from _style-switch.scss
+function getIncludedFileNames() {
+   const content = fs.readFileSync(paths.styleSwitch, 'utf8');
+   const matches = content.match(/@forward\s+['"](.+?)['"]/g);
+   if (matches) {
+      return matches.map(match => path.basename(match.split(' ')[1].replace(/['"]/g, '')));
+   }
+   return [];
+}
 
 // Compile function
 function compileGlobalStyles() {
-   return gulp.src(paths.global) // Compile only the global.scss file
+   const includedFiles = getIncludedFileNames();
+   const outputFileName = includedFiles.length ? includedFiles.join('-') + '.css' : 'global.css';
+
+   return gulp.src(paths.global)
       .pipe(sass({
          includePaths: ['scss'],
          sourceMap: true
@@ -18,12 +35,13 @@ function compileGlobalStyles() {
          console.log(err.message);
          this.emit('end');
       }))
-      .pipe(gulp.dest(paths.dist)) // Output directly to dist as global.css
+      .pipe(rename(outputFileName))
+      .pipe(gulp.dest(paths.dist));
 }
 
 // Watch function
 function watch() {
-   gulp.watch(paths.allScss, compileGlobalStyles); // Watch all SCSS files
+   gulp.watch(paths.allScss, compileGlobalStyles);
 }
 
 // Clean task (optional but recommended)
