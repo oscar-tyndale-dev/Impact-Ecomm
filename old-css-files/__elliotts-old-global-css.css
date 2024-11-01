@@ -1,0 +1,166 @@
+/*
+* Custom CSS styles
+*
+* Global by default, but use `&` to scope to just this content, e.g.
+*
+*   & .foo {
+*     color: 'red'
+*   }
+*/
+
+.sf-header__logo {
+  max-width: 250px !important;
+}
+
+
+@media (min-width: 1024px) {
+    .sf-header__logo {
+      padding-right: 20px;
+    }
+}
+
+
+
+body {
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+}
+/* 
+  Normalizes some stuff
+
+  body, h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+*/
+
+
+/* Set Maximum size to the logo on navbar */
+
+
+
+/* Container header same width as the rest of the page: 
+
+.sf-header__actions {
+    width: 100%;
+    max-width: 1240px;
+    padding: 16px 16px 0 16px;
+    box-sizing: border-box;
+}
+
+*/
+
+
+  /* Modifications for Swoop on footer */
+
+  .footer {
+    position: relative !important;
+    margin-top: 8%;
+  }
+
+  .swoop {
+    position: absolute !important;
+    left: 0%;
+    right: 0%;
+    bottom: 100%;
+    height: auto;
+  }
+
+
+
+/* Fix color text dropdown inm search bar */
+
+.v-popper__inner {
+    color: white !important;
+}
+
+
+
+
+
+/* CALL TO ACTION BUTTONS 
+
+  .button-cta-blue {
+    background-color:#004576;
+    color: white;
+    transition: 0.2s ease;
+    text-transform: uppercase;
+  }
+
+  .button-cta-blue:hover {
+      background-color:#0089E5;
+      color: white;
+      transition: 0.2s ease;
+  }
+
+  .button-cta-red {
+    background-color:#E21D38;
+    color: white;
+    transition: 0.2s ease;
+    text-transform: uppercase;
+  }
+  
+  .button-cta-red:hover {
+      background-color:#9F0016;
+      color: #FBD7D7;
+      transition: 0.2s ease;
+  }
+
+*/
+
+
+
+
+
+
+/* LINKs
+
+  p > a {
+    text-decoration: underline;
+  }
+
+  p > a:hover {
+    color:#E21D38 !important;
+  }
+
+*/
+
+
+/* Eliminates scroll bar on navigation
+  .navigation-item__dropdown {
+    max-height: unset !important;
+  }
+
+  .navigation-item__main-category {
+    font-weight: 500 !important;
+  }
+*/
+
+
+
+/* Adjust padding on L2 on navigation 
+
+.navigation-item__flyout-content {
+    padding: 30px 20px !important;
+}
+
+*/
+
+
+/* Hiddes gap between the nav ant the top, that show elements scrolling 
+.mobile-menu .sf-modal__container {
+    padding-top: 0px !important;
+}
+*/
+
+
+/* Changes color back icon mobile menu */
+/* 
+.sf-menu-item__mobile-nav-icon {
+    fill: #e21c38 !important;
+} */

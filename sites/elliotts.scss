@@ -1,0 +1,33 @@
+@use "../general-styles/global.scss";
+@use "../general-styles/homepage.scss";
+
+// ELLIOTT'S COLORS
+$color-primary-dark: #ff687e;
+$color-primary: var(--primary-dealer-color);
+$color-primary-light: #890a1d;
+$color-secondary: var(--secondary-dealer-color);
+$color-white: #FFFFFF;
+$header-links-color: var(--secondary-dealer-color); // Assuming this was already defined
+
+// Colors Buttons
+$button-background: var(--primary-dealer-color);
+$button-text: white;
+$button-hover-background: $color-primary-light;
+$button-hover-text: white;
+$menu-header-hover-text-color: white;
+
+// Footer Swoop
+
+.footer {
+  position: relative !important;
+  margin-top: 8%;
+  .swoop {
+    position: absolute !important;
+    left: 0%;
+    right: 0%;
+    bottom: 100%;
+    height: auto;
+  }
+}
+
+/* adapted for ELLIOTTS website */

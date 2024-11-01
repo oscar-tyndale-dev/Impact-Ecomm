@@ -1,0 +1,39 @@
+@use "../general-styles/global.scss";
+@use "../general-styles/homepage.scss";
+
+// JAMAICA COLORS
+$color-primary-dark: #9e153a;
+$color-primary: var(--primary-dealer-color);
+$color-primary-light: #f6afc2;
+$color-secondary: var(--secondary-dealer-color);
+$color-white: #FFFFFF;
+$header-links-color: var(--secondary-dealer-color); // Assuming this was already defined
+
+// Colors Buttons
+$button-background:#C32D55;
+$button-text: #F0F1F6;
+$button-hover-background:#FFC47B;
+$button-hover-text: #794a10;
+
+// SPECIFIC OF JAMAICA BEACH HARDWARE
+.sf-header:after {
+	content: " ";
+	width: 100%;
+	height: 8px;
+	background-image: linear-gradient(90deg,
+			hsl(99deg 65% 52%) 0%,
+			hsl(57deg 100% 38%) 16%,
+			hsl(32deg 83% 56%) 25%,
+			hsl(9deg 91% 68%) 33%,
+			hsl(344deg 69% 67%) 39%,
+			hsl(358deg 85% 73%) 45%,
+			hsl(12deg 99% 74%) 51%,
+			hsl(23deg 100% 74%) 57%,
+			hsl(33deg 100% 74%) 63%,
+			hsl(71deg 47% 65%) 70%,
+			hsl(145deg 51% 65%) 77%,
+			hsl(180deg 69% 48%) 85%,
+			hsl(195deg 84% 57%) 100%);
+	position: absolute;
+	z-index: 99;
+}

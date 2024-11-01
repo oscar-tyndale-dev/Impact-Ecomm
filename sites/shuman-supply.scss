@@ -1,7 +1,10 @@
-// JOHN PLYLER COLORS
-$color-primary-dark: #091155;
+@use "../general-styles/global.scss";
+@use "../general-styles/homepage.scss";
+
+// SHUMAN'S COLORS
+$color-primary-dark: #79070b;
 $color-primary: var(--primary-dealer-color);
-$color-primary-light: #2972da;
+$color-primary-light: #ff6b70;
 $color-secondary: var(--secondary-dealer-color);
 $color-white: #FFFFFF;
 $header-links-color: var(--secondary-dealer-color); // Assuming this was already defined
@@ -9,6 +12,9 @@ $header-links-color: var(--secondary-dealer-color); // Assuming this was already
 // Colors Buttons
 $button-background: var(--primary-dealer-color);
 $button-text: white;
-$button-hover_background: $color-primary-light;
-$button-hover_text: white;
+$button-hover-background: $color-primary-light;
+$button-hover-text: white;
 $menu-header-hover-text-color: white;
+
+
+

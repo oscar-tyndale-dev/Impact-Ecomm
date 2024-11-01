@@ -1,0 +1,185 @@
+@use 'variables';
+/* HOME PAGE -------------------------------------------------------------------- */
+
+
+/* Brands accordion */
+.item-expandable {
+	@include variables.transition;
+	cursor: pointer !important;
+	&:hover {
+		flex-grow: 2;
+	}
+}
+
+/* Slider Styles */
+.sf-carousel {
+	// border: 10px solid green;
+	.sf-arrow {
+		background-color: var(--primary-dealer-color) !important;
+		right: 15px !important;
+		&:after {
+			color: variables.$color-white !important;
+		}
+	}
+}
+
+// .controls {
+// 	.sf-arrow {
+		
+// 	}
+// }
+
+
+.carousel-slide__image {
+	background-position: center;
+}
+
+
+.sf-carousel-item.glide__slide {
+	position: relative;
+}
+
+// Fixes Carousel Bullets Position
+.carousel-bullets {
+	// background-color: white;
+	border-radius: 10px;
+	top: unset !important;
+	left: unset !important;
+	right: 1%;
+	bottom: 1%;
+}
+
+.carousel-slide * {
+	margin: unset !important;
+	padding: 0 15px;
+}
+
+// CARROUSEL SLIDES DESKTOP
+@include variables.desktop {
+	.carousel-slide {
+		&__wrapper {
+			width: 100% !important;
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 0px;
+			background: rgba(0, 0, 0, 0.309) !important;
+			// background: color-mix(in srgb, color percentage, color percentage);
+			-webkit-backdrop-filter: blur(8px);
+			backdrop-filter: blur(8px);
+			background: rgba(0, 0, 0, 0.5); // Fallback for Firefox
+		 }
+		&__content {
+			// border: 5px solid green;
+			margin: unset !important;
+			width: 100% !important;
+			display: grid;
+			grid-template-columns: 4fr 1fr;
+			grid-column-gap: 15px;
+			// grid-row-gap: 0px;
+			.call-to-action {
+				grid-area: 1 / 2 / 3 / 3;
+				display: flex;
+				padding: 15px !important;
+				align-items: center;
+				justify-content: end;
+				a {
+					min-width: 180px;
+					text-align: center;
+				}
+			}
+			p {
+				grid-area: 2 / 1 / 3 / 2;
+				vertical-align: baseline;
+				line-height: 120%;
+				// padding: 0;
+				&:not(:empty) {
+					padding-bottom: 15px;
+				}
+			}
+		}
+		&__heading {
+			grid-area: 1 / 1 / 2 / 2;
+			width: 100% !important;
+			justify-self: center;
+			align-self: center;
+			line-height: 110% !important;
+			vertical-align: bottom;
+			// padding: 0;
+			&:not(:empty) {
+				padding-top: 10px;
+			}
+		}	
+	} // end carousel slide
+	
+}
+
+
+
+// Desktop styles
+@include variables.desktop {
+	// Carousel Featured Products
+	.product-carousel {
+        width: 100vw !important;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin: 0 -50vw 0 -50vw !important;
+		&__wrapper {
+			width: 100% !important;
+			max-width: 1360px;
+		}
+		.controls__next {
+			right: 15px;
+		}
+    }
+
+
+    /* Adjusts buttons on product carousel to not be over the content */ 
+    // .product-carousel .controls__previous {
+    //     left: -45px !important;
+    // }
+    // .product-carousel .controls__next{
+    //     right: -45px !important;
+    // }
+
+
+
+}  // end Desktop
+
+// Mobile and Tablet for Slider
+@include variables.tablet-and-below {
+	.carousel-slide {
+		height: unset !important;
+		&__wrapper {
+			background-color: var(--primary-dealer-color) !important;
+		}
+		&__content {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			flex-basis: unset !important;
+			padding: 15px !important;
+		}
+		.call-to-action {
+			// border:  10px solid green;
+			box-sizing: border-box !important;
+			display: flex;
+			gap: 5px;
+			justify-content: end;
+			// align-items: stretch;
+		}
+	}
+
+	.carousel-bullets {
+		top: unset !important;
+		left: unset !important;
+		right: 10px;
+		bottom: 10px;
+	}
+
+}
+
+

@@ -1,0 +1,18 @@
+@use "../general-styles/global.scss";
+@use "../general-styles/homepage.scss";
+
+
+// JOHN PLYLER COLORS
+$color-primary-dark: #091155;
+$color-primary: var(--primary-dealer-color);
+$color-primary-light: #2972da;
+$color-secondary: var(--secondary-dealer-color);
+$color-white: #FFFFFF;
+$header-links-color: var(--secondary-dealer-color); // Assuming this was already defined
+
+// Colors Buttons
+$button-background: var(--primary-dealer-color);
+$button-text: white;
+$button-hover-background: $color-primary-light;
+$button-hover-text: white;
+$menu-header-hover-text-color: white;

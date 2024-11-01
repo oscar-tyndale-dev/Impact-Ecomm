@@ -11,13 +11,10 @@
 /* Slider Styles */
 .sf-carousel .sf-arrow {
   background-color: var(--primary-dealer-color) !important;
+  right: 15px !important;
 }
 .sf-carousel .sf-arrow:after {
   color: #FFFFFF !important;
-}
-
-.controls .sf-arrow {
-  right: 0 !important;
 }
 
 .carousel-slide__image {
@@ -28,51 +25,72 @@
   position: relative;
 }
 
+.carousel-bullets {
+  border-radius: 10px;
+  top: unset !important;
+  left: unset !important;
+  right: 1%;
+  bottom: 1%;
+}
+
+.carousel-slide * {
+  margin: unset !important;
+  padding: 0 15px;
+}
+
 @media (min-width: 1024px) {
   .carousel-slide__wrapper {
     width: 100% !important;
     height: auto;
     position: absolute;
-    padding: 0 15px;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.4) !important;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-  }
-  .carousel-slide__heading {
-    order: 0;
-    width: 80%;
-    line-height: 1.5 !important;
-    font-size: 1.5em !important;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.309) !important;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
   }
   .carousel-slide__content {
+    margin: unset !important;
     width: 100% !important;
-    max-width: 1360px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-column-gap: 15px;
   }
   .carousel-slide__content .call-to-action {
-    justify-self: end;
-    order: 1;
-    align-self: center;
+    grid-area: 1/2/3/3;
+    display: flex;
+    padding: 15px !important;
+    align-items: center;
+    justify-content: end;
+  }
+  .carousel-slide__content .call-to-action a {
+    min-width: 180px;
+    text-align: center;
   }
   .carousel-slide__content p {
-    width: 100%;
-    order: 2;
-    margin: 0 !important;
-    max-width: 80%;
-    font-size: 0.8em;
-    font-weight: 200;
-    line-height: 150% !important;
-    padding-bottom: 10px !important;
+    grid-area: 2/1/3/2;
+    vertical-align: baseline;
+    line-height: 120%;
   }
-
+  .carousel-slide__content p:not(:empty) {
+    padding-bottom: 15px;
+  }
+  .carousel-slide__heading {
+    grid-area: 1/1/2/2;
+    width: 100% !important;
+    justify-self: center;
+    align-self: center;
+    line-height: 110% !important;
+    vertical-align: bottom;
+  }
+  .carousel-slide__heading:not(:empty) {
+    padding-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
   .product-carousel {
     width: 100vw !important;
     position: relative;
@@ -85,7 +103,7 @@
     max-width: 1360px;
   }
   .product-carousel .controls__next {
-    right: -30px;
+    right: 15px;
   }
 
   /* Adjusts buttons on product carousel to not be over the content */
@@ -99,13 +117,16 @@
   }
   .carousel-slide__content {
     width: 100%;
-    padding: 10px 20px !important;
     display: flex;
     flex-direction: column;
     flex-basis: unset !important;
+    padding: 15px !important;
   }
-  .carousel-slide__content p {
-    margin-top: 0;
+  .carousel-slide .call-to-action {
+    box-sizing: border-box !important;
+    display: flex;
+    gap: 5px;
+    justify-content: end;
   }
 
   .carousel-bullets {
@@ -113,10 +134,5 @@
     left: unset !important;
     right: 10px;
     bottom: 10px;
-  }
-
-  .cms-button {
-    width: 100%;
-    text-align: center;
   }
 }

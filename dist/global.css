@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   font-weight: 400;
-  color: #333333;
+  background-color: green;
 }
 
 h1,
@@ -12,7 +12,7 @@ h5 {
   line-height: 1.25;
 }
 
-.builder-text p {
+.builder-text, .builder-block p {
   line-height: 1.65 !important;
 }
 
@@ -31,33 +31,28 @@ hr {
   transition: all 0.2s ease;
 }
 .sf-footer .builder-text a:hover {
-  color: #2972da !important;
+  color: #ff6b70 !important;
 }
 .sf-footer .footer__link {
   color: #FFFFFF !important;
   transition: all 0.2s ease;
 }
 .sf-footer .footer__link:hover {
-  color: #2972da !important;
+  color: #ff6b70 !important;
 }
 
 .category__banner {
   border-radius: 12px;
-  overflow: clip;
+  overflow: hidden;
 }
 .category__banner-image img {
   object-fit: cover;
 }
 
 /* buttons CTA styling with site colors */
-.builder-block {
-  /* Hover effect */
-}
 .builder-block a[role=button],
 .builder-block a[role=link] {
-  /* Your styles here */
   background-color: var(--primary-dealer-color);
-  border: 1px solid transparent;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -67,12 +62,12 @@ hr {
   transition: all 0.2s ease;
   cursor: pointer;
 }
+
 .builder-block a[role=button]:hover,
 .builder-block a[role=link]:hover {
-  background-color: #2972da;
-  border: 1px solid white;
-  transition: all 0.3s ease;
+  background-color: #ff6b70;
   color: white;
+  transition: all 0.3s ease;
 }
 
 .locations-page {
@@ -83,7 +78,7 @@ hr {
   color: var(--secondary-dealer-color);
 }
 .sf-header__action:hover {
-  color: var(--secondary-dealer-color) !important;
+  color: var(--primary-dealer-color) !important;
 }
 .sf-header__header {
   column-gap: 15px;

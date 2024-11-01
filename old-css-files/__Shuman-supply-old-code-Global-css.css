@@ -1,0 +1,111 @@
+/*
+* Custom CSS styles
+*
+* Global by default, but use `&` to scope to just this content, e.g.
+*
+*   & .foo {
+*     color: 'red'
+*   }
+*/
+
+
+/* Base overrides for color of the brand:active*/
+body {
+    overflow-x: hidden; /* fixed horizontal scroll on the homepage when featured products is displayed */
+}
+
+p {
+    margin: 0 !important;
+}
+
+/* Font Fixes */
+p {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /* font-weight: true; */
+  line-height: 1.3;
+}
+
+
+
+.builder-text p {
+    line-height: 1.65;
+}
+
+#layout {
+	max-width: 1360px !important;
+}
+
+.layout-root {
+	max-width: 1360px !important;
+}
+
+#category {
+	max-width: 1360px !important;
+}
+
+
+.sf-header__logo img {
+	max-height: 130px !important;
+	max-width: unset !important;
+}
+
+.sf-price__regular {
+	font-weight: 700;
+}
+
+
+@media (min-width: 992px) {
+	.product-carousel {
+		margin: 3rem 0 3rem calc(50% - 50vw) !important;
+	}
+
+	.product-carousel__wrapper {
+		width: 100% !important;
+		max-width: 1360px;
+	}
+
+	.product__details {
+		width: 100%;
+	}
+
+}
+
+/* Fixes logo size and centering on mobile */
+@media (max-width:641px) {
+	.sf-header__logo img {
+		max-height: 80px !important;
+		max-width: unset !important;
+	}
+	.sf-header__mobile-top-bar {
+		padding-bottom: 10px !important;
+	}
+	.sf-search-bar {
+		padding-top: 10px !important;
+	}
+	.sf-header__aside {
+	  padding: 0 20px;
+	}
+	.header-mobile-icons {
+		margin: 0px;
+	}
+}
+
+
+a[role="button"] {
+	background-color: var(--primary-dealer-color);
+	color: white;
+	transition: all 0.2s ease-in;
+}
+
+a[role="button"]:hover {
+	filter: saturate(1.7) brightness(1.2);
+	color: white;
+	transition: all 0.2s ease-out;
+}

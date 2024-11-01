@@ -1,12 +1,11 @@
-@import 'variables';
-
+@use 'variables';
 
 
 // Global styles
 body {
 	overflow-x: hidden;
 	font-weight: 400;
-	color: #333333;
+	// color: #333333;
 }
 
 // Typography
@@ -18,7 +17,7 @@ h5 {
 	line-height: 1.25;
 }
 
-.builder-text p {
+.builder-text, .builder-block p {
 	line-height: 1.65 !important;
 }
 
@@ -35,26 +34,26 @@ hr {
 /* footer text color adjustment */
 .sf-footer {
 	.builder-text a {
-		color: $color-white !important;
+		color: variables.$color-white !important;
 		transition: all 0.2s ease;
 
 		&:hover {
-			color: $color-primary-light !important;
+			color: variables.$color-primary-light !important;
 		}
 	}
 
 	.footer__link {
-		color: $color-white !important;
+		color: variables.$color-white !important;
 		transition: all 0.2s ease;
 		&:hover {
-			color: $color-primary-light !important;
+			color: variables.$color-primary-light !important;
 		}
 	}
 }
 
 .category__banner {
     border-radius: 12px;
-    overflow: clip;
+    overflow: hidden;
 	&-image {
 		// height: auto !important;
 		img {
@@ -65,30 +64,24 @@ hr {
 
 // Fix button style
 /* buttons CTA styling with site colors */
-.builder-block {
-	a[role="button"],
-	a[role="link"] {
-		/* Your styles here */
-		background-color: $button-background;
-		border: 1px solid transparent;
-		color: $button-text;
-		padding: 10px 20px;
-		text-decoration: none;
-		border-radius: 5px;
-		display: inline-block;
-		text-align: center;
-		transition: all 0.2s ease;
-		cursor: pointer;
-	}
+.builder-block a[role="button"],
+.builder-block a[role="link"] {
+	background-color: variables.$button-background;
+	color: variables.$button-text;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	display: inline-block;
+	text-align: center;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
 
-	/* Hover effect */
-	a[role="button"]:hover,
-	a[role="link"]:hover {
-		background-color: $button-hover_background;
-		border: 1px solid $button-hover_text;
-		transition: all 0.3s ease;
-		color: $button-hover_text;
-	}
+.builder-block a[role="button"]:hover,
+.builder-block a[role="link"]:hover {
+	background-color: variables.$button-hover_background;
+	color: variables.$button-hover_text;
+	transition: all 0.3s ease;
 }
 
 // Fix locations page when content is shorter and footer goes up.
@@ -99,10 +92,9 @@ hr {
 // Header styles
 .sf-header {
 	&__action {
-		color: $header-links-color;
-
+		color: variables.$header-links-color;
 		&:hover {
-			color: $color-secondary !important;
+			color: variables.$color-primary !important;
 		}
 	}
 
@@ -110,7 +102,7 @@ hr {
 		column-gap: 15px;
 		box-sizing: border-box;
 
-		@include desktop {
+		@include variables.desktop {
 			// padding: 15px !important;
 			max-width: 1360px !important;
 		}
@@ -119,20 +111,20 @@ hr {
 	.navigation-item {
 		&__link {
 			&:hover {
-				color: $menu-header-hover-text-color !important;
+				color: variables.$menu-header-hover-text-color !important;
 			}
 		}
 	}
 
 	.current-selected-store {
-		color: $header-links-color;
+		color: variables.$header-links-color;
 
 		&__icon {
-			color: $color-secondary !important;
+			color: variables.$color-secondary !important;
 		}
 
 		&__store-button {
-			color: $color-secondary !important;
+			color: variables.$color-secondary !important;
 		}
 	}
 
@@ -182,19 +174,19 @@ hr {
 
 .search-dropdown {
 	&__column {
-		color: $color-primary !important;
+		color: variables.$color-primary !important;
 	}
 
 	&__title {
-		color: $color-primary !important;
+		color: variables.$color-primary !important;
 	}
 
 	&__recent-item a {
-		color: $color-white !important;
+		color: variables.$color-white !important;
 		cursor: pointer;
 
 		&:hover {
-			color: $color-secondary !important;
+			color: variables.$color-secondary !important;
 		}
 	}
 }
@@ -206,15 +198,15 @@ hr {
 }
 
 // Responsive adjustments
-@include mobile {
+@include variables.mobile {
 	// Add mobile-specific styles here
 }
 
-@include tablet {
+@include variables.tablet {
 	// Add tablet-specific styles here
 }
 
-@include desktop {
+@include variables.desktop {
 	// Add desktop-specific styles here
 	
 
@@ -245,41 +237,17 @@ hr {
 				h1 {
 					font-weight: 800;
 					font-size: 2em;
-					color: $color-primary;
+					color: variables.$color-primary;
 				}
 			}
 			&__brand {
 				h2 {
-					color: $color-secondary;
+					color: variables.$color-secondary;
 					opacity: 0.6;
 				}
 			}
 		}
 	}
-	// SPECIFIC OF JAMAICA BEACH HARDWARE
-	// .sf-header:after {
-	// 	content: " ";
-	// 	width: 100%;
-	// 	height: 8px;
-	// 	background-image: linear-gradient(90deg,
-	// 			hsl(99deg 65% 52%) 0%,
-	// 			hsl(57deg 100% 38%) 16%,
-	// 			hsl(32deg 83% 56%) 25%,
-	// 			hsl(9deg 91% 68%) 33%,
-	// 			hsl(344deg 69% 67%) 39%,
-	// 			hsl(358deg 85% 73%) 45%,
-	// 			hsl(12deg 99% 74%) 51%,
-	// 			hsl(23deg 100% 74%) 57%,
-	// 			hsl(33deg 100% 74%) 63%,
-	// 			hsl(71deg 47% 65%) 70%,
-	// 			hsl(145deg 51% 65%) 77%,
-	// 			hsl(180deg 69% 48%) 85%,
-	// 			hsl(195deg 84% 57%) 100%);
-	// 	position: absolute;
-	// 	z-index: 99;
-	// }
 }
 	
 
-
-	
