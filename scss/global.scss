@@ -1,6 +1,6 @@
 @forward 'homepage';
+@use './variables' as *;
 @use 'style-switch' as *;
-@use 'variables' as *;
 
 // Global styles
 body {
@@ -63,6 +63,7 @@ hr {
 	}
 }
 
+
 // Fix button style
 /* buttons CTA styling with site colors */
 .builder-block a[role="button"],
@@ -90,12 +91,16 @@ hr {
 	min-height: calc(100vh - 600px) !important;
 }
 
-// Header styles
+
+//  ----------------------------------- Header styles -----------------------------------
+
 .sf-header {
 	&__action {
-		color: $header-links-color;
+		color: $header-links-color !important;
+		transition: color 0.3s ease;
 		&:hover {
-			color: $color-primary !important;
+			color: $menu-header-hover-text-color !important;
+			transition: color 0.3s ease;
 		}
 	}
 
@@ -130,6 +135,7 @@ hr {
 	}
 
 	&__icons {
+		color: $header-links-color !important;
 		margin: 0;
 	}
 
