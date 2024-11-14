@@ -6,7 +6,6 @@
 body {
 	overflow-x: hidden;
 	font-weight: 400;
-	// color: #333333;
 }
 
 // Typography
@@ -21,6 +20,7 @@ h5 {
 .builder-text, .builder-block p {
 	line-height: 1.65 !important;
 }
+
 
 hr {
 	display: block;
@@ -121,16 +121,15 @@ hr {
 			}
 		}
 	}
-
 	.current-selected-store {
 		color: $header-links-color;
 
 		&__icon {
-			color: $color-secondary !important;
+			color: $header-icons-color !important;
 		}
 
 		&__store-button {
-			color: $color-secondary !important;
+			color: $header-icons-color !important;
 		}
 	}
 
@@ -169,6 +168,7 @@ hr {
 
 		>* {
 			flex: 1;
+			justify-content: start;
 		}
 
 		.sf-button:first-child {

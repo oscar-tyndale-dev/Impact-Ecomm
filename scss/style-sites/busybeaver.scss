@@ -1,0 +1,40 @@
+// BUSY BEAVER COLORS
+$color-primary-dark: hsl(356, 93%, 18%);
+$color-primary: var(--primary-dealer-color);
+$color-primary-light: #f77f87;
+$color-secondary: var(--secondary-dealer-color);
+$color-white: #FFFFFF;
+
+
+//color of the links and icons on the header on the right of the search bar
+$header-links-color: $color-white; // Assuming this was already defined
+$menu-header-hover-text-color: #FFD6AF;
+
+// Color of the icons in the header above the search bar
+$header-icons-color: #FFD6AF;
+
+// Colors Buttons
+$button-background: #970216;
+$button-text: #FFD6AF;
+$button-hover-background: #E31A37;
+$button-hover-text: white;
+
+
+// --- Aditional Specific styles ---
+
+
+.builder-block a[role="button"],
+.builder-block a[role="link"] {
+    border: 1px solid $button-background;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover {
+        border-color: #FFD6AF !important;
+        transition: all 0.3s ease;
+    }
+}
+
+/* This fixes the color of the menu hamburger */
+.sf-header__aside {
+    filter: invert(1);
+}
