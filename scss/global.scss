@@ -115,10 +115,14 @@ hr {
 	}
 
 	.navigation-item {
+		transition: all 0.2s ease-out;
 		&__link {
 			&:hover {
-				color: $menu-header-hover-text-color !important;
+				color: $menu-navigation-hover-text-color !important;
 			}
+		}
+		&:hover {
+			transition: all 0.2s ease-in;
 		}
 	}
 	.current-selected-store {

@@ -1,0 +1,24 @@
+// BERNIE HARDWARE COLORS
+$color-primary-dark: #0a2006 ;
+$color-primary: var(--primary-dealer-color);
+$color-primary-light: #469638;
+$color-secondary: var(--secondary-dealer-color);
+$color-white: #FFFFFF;
+
+//color of the links and icons on the header on the right of the search bar
+$header-links-color: #171718 ; // Assuming this was already defined
+$menu-header-hover-text-color: var(--primary-dealer-color);
+$menu-navigation-hover-text-color: #e4ded1;
+
+// Color of the icons in the header above the search bar
+$header-icons-color: #FFD6AF;
+
+// Colors Buttons CTA
+$button-background: #d6bf89;
+$button-text: var(--primary-dealer-color);
+$button-hover-background: var(--secondary-dealer-color);
+$button-hover-text: #f3f3f3;
+
+
+
+// --- Aditional Specific styles ---
