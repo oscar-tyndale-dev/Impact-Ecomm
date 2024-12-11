@@ -6,6 +6,8 @@
 body {
 	overflow-x: hidden;
 	font-weight: 400;
+	color: $body-font-color;
+
 }
 
 // Typography
@@ -14,7 +16,7 @@ h2,
 h3,
 h4,
 h5 {
-	line-height: 1.25;
+	line-height: 1.25 !important;
 }
 
 .builder-text, .builder-block p {
@@ -34,20 +36,28 @@ hr {
 
 /* footer text color adjustment */
 .sf-footer {
-	.builder-text a {
-		color: $color-white !important;
-		transition: all 0.2s ease;
-
-		&:hover {
-			color: $color-primary-light !important;
-		}
-	}
+	// .builder-text a {
+	// 	color: $color-white !important;
+	// 	transition: all 0.2s ease;
+	// 	&:hover {
+	// 		color: $color-primary-light !important;
+	// 	}
+	// }
 
 	.footer__link {
-		color: $color-white !important;
-		transition: all 0.2s ease;
+		color: $footer-link-color !important;
+		transition: color 0.2s ease;
 		&:hover {
-			color: $color-primary-light !important;
+			color: $footer-link-color-hover !important;
+			text-decoration: underline;
+			transition: color 0.2s ease;
+		}
+	}
+	&__container a {
+		color: $footer-link-color !important;
+		&:hover {
+			color: $footer-link-color-hover !important;
+			text-decoration: underline;
 		}
 	}
 }
@@ -103,7 +113,6 @@ hr {
 			transition: color 0.3s ease;
 		}
 	}
-
 	&__header {
 		column-gap: 15px;
 		box-sizing: border-box;
@@ -155,6 +164,11 @@ hr {
 	}
 
 
+	.sf-search-bar {
+		border: solid;
+		box-shadow: unset !important;
+	}
+
 	// a:hover {
 	// 	color
 	// }
@@ -189,15 +203,17 @@ hr {
 	}
 
 	&__title {
-		color: $color-primary !important;
+		color: $color-primary-dark !important;
 	}
 
 	&__recent-item a {
 		color: $color-white !important;
 		cursor: pointer;
+		transition: all 0.2s ease;
 
 		&:hover {
-			color: $color-secondary !important;
+			color: $color-primary-light !important;
+			transition: all 0.2s ease;
 		}
 	}
 }

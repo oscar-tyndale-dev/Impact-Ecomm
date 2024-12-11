@@ -1,0 +1,232 @@
+/*
+* Custom CSS styles
+*
+* Global by default, but use `&` to scope to just this content, e.g.
+*
+*   & .foo {
+*     color: 'red'
+*   }
+*/
+
+.item-expandable {
+    transition: all 0.4s ease-in-out;
+}
+.item-expandable:hover {
+    flex-grow: 2;
+}
+
+
+/* Background */ 
+.sf-arrow {
+    background-color: var(--primary-dealer-color) !important;
+}
+/* arrow color */
+.sf-arrow:after {
+    color: white !important;
+}
+
+
+/* Slider buttons with arrows */ 
+
+button.sf-arrow--left.sf-button--pure.sf-button,
+button.sf-arrow--right.sf-arrow.sf-button {
+    box-shadow: unset !important;
+    border-radius: unset !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+/*  Carousel content box fixes */
+.carousel-slide__image {
+    background-position: center;
+}
+
+@media (min-width: 992px) {
+
+    .call-to-action {
+        position: absolute;
+        right: 15px;
+    }
+    .call-to-action a {
+        line-height: unset;
+    }
+
+    .carousel-slide__wrapper {
+        width: 100% !important;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .carousel-slide__content {
+        width: 100% !important;
+        line-height: unset !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .carousel-slide__content:not(:empty) {
+        padding: 15px;
+    }
+
+
+    .carousel-slide__content p {
+        margin: unset !important;
+        /* line-height: 1.2; */
+        flex-basis: 80%;
+        font-weight: 300;
+    }
+
+    .carousel-slide__heading {
+        padding-top: 0;
+        flex-basis: 100%;
+    }
+
+    .sf-carousel-item.glide__slide {
+        position: relative;
+    }
+
+    .carousel-bullets {
+        top: 101% !important;
+        left: 0 !important;
+    }
+
+    .carousel-slide__wrapper {
+        display: block !important;
+    }
+}
+
+/* 
+.carousel-slide__heading {
+    font-size: 2rem !important;
+    display: none;
+} */
+
+
+/* mobile */
+@media (max-width: 991px) {
+
+    .carousel-slide__content {
+        width: 100%;
+        flex-basis: 180px !important;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--header-background);
+    }
+
+    .cms-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-slide__content p {
+        margin-top: 0;
+    }
+
+}
+    
+
+
+
+
+
+/* ----------------- GLOBAL STYLES ------------------ */
+
+
+/*
+* Custom CSS styles
+*
+* Global by default, but use `&` to scope to just this content, e.g.
+*
+*   & .foo {
+*     color: 'red'
+*   }
+*/
+
+/* buttons  */
+a[role="button"] {
+    /* Your styles here */
+    background-color: #500404;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* Hover effect */
+a[role="button"]:hover {
+    filter: brightness(150%);
+    border: 1px solid white;
+    transition: all 0.3s ease;
+}
+
+
+
+/* fix navigation color contrast problem on navigation and search pop-up */
+.navigation-item--hover-background:hover a {
+    color: white !important;
+    transition: color ease-in-out 100ms;
+}
+.search-dropdown__recent {
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* makes the header the same width as the content on desktop
+to also help reduce the size of the search bar */
+@media(min-width: 1024px) {
+    .sf-header__header {
+        max-width: 1250px !important;
+    }
+}
+
+ /* fixed horizontal scroll on the homepage when featured products is displayed */
+body {
+    overflow-x: hidden;
+}
+
+/* Adjust the line height of the headers currently to high */
+h1, h2 {
+    line-height: 1.2 !important;
+}
+
+
+/* Fix hover Problem for anchor links */
+a:hover {
+    color: var(--primary-dealer-color) !important;
+    transition: ease 300ms;
+}
+
+
+/* Fixes hover color on flyout menu */
+
+.sf-menu-item__label {
+  transition: all 0.3s ease;
+}
+
+.navigation-item__flyout-item:hover .sf-menu-item__label {
+  color: #FF2F42 !important;
+}
+
+
+.navigation-item__flyout-title:hover .sf-menu-item__label {
+  color: #FF2F42 !important;
+}

@@ -1,28 +1,28 @@
-// BERNIE HARDWARE COLORS
-$color-primary-dark: #0a2006 ;
+// PARKERS HARDWARE COLORS
+$color-primary-dark: #500404 ;
 $color-primary: var(--primary-dealer-color);
-$color-primary-light: #469638;
+$color-primary-light: #E40D22;
 $color-secondary: var(--secondary-dealer-color);
 $color-white: #FFFFFF;
-$body-font-color: #1B2F51;  
+$body-font-color: #151414;  
 
 //color of the links and icons on the header on the right of the search bar
 $header-links-color: #171718 ; // Assuming this was already defined
 $menu-header-hover-text-color: var(--primary-dealer-color);
-$menu-navigation-hover-text-color: #D6BF89;
+$menu-navigation-hover-text-color: #EFEFEF;
 
 // Color of the icons in the header above the search bar
-$header-icons-color: #FFD6AF;
+$header-icons-color: #AA1F2C;
 
 // Colors Buttons CTA
-$button-background: #d6bf89;
-$button-text: var(--primary-dealer-color);
-$button-hover-background: var(--secondary-dealer-color);
+$button-background: #500706;
+$button-text: #FFF;
+$button-hover-background: #E40D22;
 $button-hover-text: #f3f3f3;
 
 // Colors for the Footer
 $footer-link-color: #F3F3F3;
-$footer-link-color-hover: #D6BF89;
+$footer-link-color-hover: #E40D22;
 
 // --- Aditional Specific styles ---
 // hello
